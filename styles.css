@@ -1,0 +1,236 @@
+/* GLOBAL STYLES */
+:root {
+  --primary-color-1: hsl(158, 36%, 37%);
+  --primary-color-2: hsl(30, 38%, 92%);
+
+  --neutral-color-1: hsl(212, 21%, 14%);
+  --neutral-color-2: hsl(228, 12%, 48%);
+  --neutral-color-3: hsl(0, 0%, 100%);
+
+  --fs-paragraph: 0.5rem;
+
+  --fw-500: 500;
+  --fw-700: 700;
+  --font-family-1: Montserrat;
+  --font-family-2: Fraunces;
+}
+
+/* start CSS Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+/* end CSS Reset  */
+
+body {
+  font-family: Montserrat, Fraunces;
+  background-color: var(--primary-color-2);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.perfume-photo {
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+  /*   display: block; */
+}
+
+/* .perfume-photo-large {
+  display: none;
+} */
+
+.figure {
+  /*  max-width: 100%; */
+  margin: 0px;
+  padding: 0px;
+}
+h2 {
+  font-family: var(--font-family-2);
+  font-weight: var(--fw-700);
+  margin-top: 0.5rem;
+  color: var(--neutral-color-1);
+/*   font-size:x-large; */
+font-size: 2rem;
+}
+
+.perfume-description {
+  color: var(--neutral-color-2);
+  font-size: 0.8rem;
+  font-weight: var(--fw-500);
+}
+
+.subtext {
+  text-transform: uppercase;
+  color: var(--neutral-color-2);
+  font-family: Montserrat;
+  letter-spacing: 0.2rem;
+  margin-top: 1rem;
+  font-weight: var(--fw-600);
+  font-size: 0.7rem;
+}
+
+main {
+  background-color: var(--neutral-color-3);
+  border-radius: 0.5rem;
+  max-width: 20rem;
+}
+p {
+  font-size: 14px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 2rem 1.5rem 2rem;
+}
+
+.pricetag {
+  color: var(--primary-color-1);
+  font-size: 2rem;
+  font-family: var(--font-family-2);
+  font-weight: var(--fw-700);
+}
+
+.pricecross {
+  text-decoration: line-through;
+  font-family: var(--font-family-1);
+  color: var(--neutral-color-2);
+  margin-left: 1rem;
+}
+
+.cart-button {
+  background-color: var(--primary-color-1);
+  color: var(--neutral-color-3);
+  font-weight: var(--fw-700);
+  font-family: var(--font-family-2);
+  border-radius: 0.3rem;
+  border-style: none;
+  padding: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-icon {
+  margin: 0rem;
+  padding: 0rem;
+}
+.price-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0rem;
+}
+
+.cart-button:hover {
+  background-color: var(--neutral-color-1);
+}
+
+@media screen and (min-width: 40rem) {
+  main {
+    display: flex;
+    flex-direction: row;
+    max-width: 35rem;
+  }
+
+  .perfume-photo {
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+    max-width: 18rem;
+  }
+
+  .text-container {
+    max-width: 18rem;
+/*     justify-content: space-evenly; */
+    justify-content: space-around;
+  }
+  .price-wrapper{
+    margin: 0rem 0rem;
+  }
+}
