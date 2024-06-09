@@ -136,8 +136,8 @@ h2 {
   font-weight: var(--fw-700);
   margin-top: 0.5rem;
   color: var(--neutral-color-1);
-/*   font-size:x-large; */
-font-size: 2rem;
+  /*   font-size:x-large; */
+  font-size: 2rem;
 }
 
 .perfume-description {
@@ -223,15 +223,17 @@ p {
 
   .perfume-photo {
     border-radius: 0.5rem 0rem 0rem 0.5rem;
-    max-width: 18rem;
+  }
+
+  .figure {
+    width: 50%;
   }
 
   .text-container {
-    max-width: 18rem;
-/*     justify-content: space-evenly; */
     justify-content: space-around;
+    width: 50%;
   }
-  .price-wrapper{
+  .price-wrapper {
     margin: 0rem 0rem;
   }
 }
