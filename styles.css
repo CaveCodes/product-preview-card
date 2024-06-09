@@ -219,6 +219,10 @@ p {
     display: flex;
     flex-direction: row;
     max-width: 35rem;
+    /*    
+    another colution:
+    display: grid;
+    grid-template-columns: repeat(2, 17.5rem) */
   }
 
   .perfume-photo {
